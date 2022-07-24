@@ -67,15 +67,15 @@ function createData(name, calories, fat, carbs, protein, miami,spain, monaco, ba
   
   const rows = [
     createData('Red Bull', 0, 37, 18, 58, 38, 44, 40, 44, 25, 24, 31),
-    createData('Ferrai', 237, 9.0, 37, 4.3),
-    createData('Mercedes', 262, 16.0, 24, 6.0),
-    createData('Mclaren', 305, 3.7, 67, 4.3),
-    createData('Alpine', 356, 16.0, 49, 3.9),
-    createData('Alfa Romeo', 356, 16.0, 49, 3.9),
-    createData('Haas', 356, 16.0, 49, 3.9),
-    createData('Alpha Tauri', 356, 16.0, 49, 3.9),
-    createData('Aston Martin', 356, 16.0, 49, 3.9),
-    createData('Williams', 356, 16.0, 49, 3.9),
+    createData('Ferrai', 44, 34, 26, 20, 33, 12, 30, 0,	29,	37,	38),
+    createData('Mercedes', 27,	11,	27,	12,	18,	25,	14,	27,	27,	16,	33),
+    createData('Mclaren', 0,	6,	18,	22,	0,	4,	9,	6,	0,	8,	8,),
+    createData('Alpine', 8,	8,	6,	0,	4,	8,	6,	7,	10,	10,	14),
+    createData('Alfa Romeo', 9,	0,	4,	12,	6,	8,	2,	0,	10,	0,	0),
+    createData('Haas', 10,	2,	0,	3,	0,	0,	0,	0,	0,	5,	14),
+    createData('Alpha Tauri', 4,	4,	2,	6,	0,	1,	0,	10,	0,	0,    0,),
+    createData('Aston Martin', 0,	0,	0,	5,	1,	0,	1,	8,	1,	2,	0),
+    createData('Williams', 0,	0,	1,	0,	2,	0,	0,	0,	0,	0,	0,),
   ];
   
 
@@ -149,7 +149,7 @@ export const Teams_switch = () => {
                             </TableBody>
                         </Table>
                     </TableContainer>
-                    
+                    <Teams_chart></Teams_chart>
                 </Collapse>
             </Typography>
         </ThemeProvider>
