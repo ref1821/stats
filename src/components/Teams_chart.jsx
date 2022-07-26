@@ -22,6 +22,20 @@ import {
     Legend
   );
 
+
+  export const options = {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top',
+      },
+      title: {
+        display: true,
+        text: 'WCC',
+      },
+    },
+  };
+
 export const Teams_chart = (props) => {
     const data={
         labels:['BAHRAIN',	'JEDDAH',	'AUSTRALIA',	'IMOLA',	'MIAMI',	'SPAIN',	'MONACO',	'BAKU',	'CANADA',	'SILVERSTONE',	'RB RING', 'PAUL RICARD'],
@@ -102,7 +116,7 @@ export const Teams_chart = (props) => {
   return (
     <div>
         <Container>
-            <Line data={data}  />
+            <Line data={data} options={options} />
         </Container>
     </div>
   )

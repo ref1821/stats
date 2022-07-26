@@ -23,8 +23,7 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
-import { Teams_chart } from './Teams_chart';
-
+import {Drivers_chart} from './Drivers_chart'
 
 const ExpandMore = styled((props) => {
     const { expand, ...other } = props;
@@ -37,66 +36,45 @@ const ExpandMore = styled((props) => {
     }),
   }));
 
-const theme = createTheme({
-    components:{
-        typography:{
-            fontFamily:[
-                '-apple-system',
-                'BlinkMacSystemFont',
-                '"Segoe UI"',
-                'Roboto',
-                '"Helvetica Neue"',
-                'Arial',
-                'sans-serif',
-                '"Apple Color Emoji"',
-                '"Segoe UI Emoji"',
-                '"Segoe UI Symbol"'
-            ]
-        }
-    },
-    palette: {
-        primary: {
-            main: red[600],
-        },
-        secondary:{
-            main: teal[500],
-        },
-    },
-})
-
 function createData(name, calories, fat, carbs, protein, miami,spain, monaco, baku, canada, silverstone, austria, francia) {
     return { name, calories: calories, fat: fat, carbs, protein, miami, spain, monaco, baku, canada, silverstone, austria, francia };
   }
   
-  const rows = [
-    createData('Red Bull', 0, 37, 18, 58, 38, 44, 40, 44, 25, 24, 31, 37),
-    createData('Ferrari', 44, 34, 26, 20, 33, 12, 30, 0,	29,	37,	38, 11),
-    createData('Mercedes', 27,	11,	27,	12,	18,	25,	14,	27,	27,	16,	33, 33),
-    createData('Mclaren', 0,	6,	18,	22,	0,	4,	9,	6,	0,	8,	8, 8 ),
-    createData('Alpine', 8,	8,	6,	0,	4,	8,	6,	7,	10,	10,	14, 12),
-    createData('Alfa Romeo', 9,	0,	4,	12,	6,	8,	2,	0,	10,	0,	0, 0),
-    createData('Haas', 10,	2,	0,	3,	0,	0,	0,	0,	0,	5,	14, 0),
-    createData('Alpha Tauri', 4,	4,	2,	6,	0,	1,	0,	10,	0,	0, 0, 0),
-    createData('Aston Martin', 0,	0,	0,	5,	1,	0,	1,	8,	1,	2,	0, 1),
-    createData('Williams', 0,	0,	1,	0,	2,	0,	0,	0,	0,	0,	0, 0),
+const rows = [
+    createData('Verstappen', 0, 25, 0, 34, 26, 25, 15, 25, 25, 6, 27, 25),
+    createData('Perez', 0, 12, 18, 24, 12, 19, 25, 19, 0, 18, 4, 12),
+    createData('Leclerc', 26, 19, 26, 15, 18, 0, 12, 0, 10, 12, 32, 0),
+    createData('Sainz', 18, 15, 0, 5, 15, 12, 18, 0, 19, 25, 6, 11),
+    createData('Hamilton', 15, 1, 12, 0, 8, 10, 4, 12, 15, 16, 16, 18),
+    createData('Russel', 12, 10, 15, 12, 10, 15, 10, 15, 12, 0, 17, 15),
+    createData('Norris', 0, 6, 10, 19, 0, 4, 9, 2, 0, 8, 6, 6),
+    createData('Ricciardo', 0, 0, 8, 3, 0, 0, 0, 4, 0, 0, 2, 2),
+    createData('Alonso', 2, 0, 0, 0, 0, 2, 6, 6, 2, 10, 1, 8),
+    createData('Ocon', 6, 8, 6, 0, 4, 6, 0, 1, 8, 0, 13, 4),
+    createData('Bottas', 8, 0, 4, 12, 6, 8, 2, 0, 6, 0, 0, 0),
+    createData('Zhou', 1, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0),
+    createData('Magnussen', 10, 2, 0, 3, 0, 0, 0, 0, 0, 1, 6, 0),
+    createData('Schumacher', 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 8, 0),
+    createData('Gasly',0, 4, 2, 0, 0, 0, 0, 10, 0, 0, 0, 0),
+    createData('Tsunoda', 4, 0, 0, 6, 0, 1, 0, 0, 0, 0, 0, 0),
+    createData('Vettel', 0, 0, 0, 4, 0, 0, 1, 8, 0, 2, 0, 0),
+    createData('Stroll', 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1),
+    createData('Albon', 0, 0, 1, 0, 2, 0, 0, 0, 0, 0, 0, 0),
+    createData('Latifi', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
   ];
   
 
-export const Teams_switch = () => {
-
+export const Drivers_switch = () => {
     const [expanded, setExpanded] = useState(false);
 
     const handleExpandClick = () => {
         setExpanded(!expanded);
     };
-
-    
-    
   return (
     <Box>
         <ThemeProvider>
             <Typography>
-                Teams
+                Drivers
                 <ExpandMore
                     expand={expanded}
                     onClick={handleExpandClick}
@@ -152,7 +130,7 @@ export const Teams_switch = () => {
                             </TableBody>
                         </Table>
                     </TableContainer>
-                    <Teams_chart></Teams_chart>
+                    <Drivers_chart></Drivers_chart>
                 </Collapse>
             </Typography>
         </ThemeProvider>
