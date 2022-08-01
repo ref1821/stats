@@ -21,8 +21,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route index element={<Home />} />
-          <Route path="/Teams" element={<Teams_stats/>}></Route>
-          <Route path="/Drivers" element={<Drivers_stats/>}></Route>
+          <Route path="/WCC" element={<Teams_stats/>}></Route>
+          <Route path="/WDC" element={<Drivers_stats/>}></Route>
         </Routes>
       </BrowserRouter>
     </div>

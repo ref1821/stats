@@ -10,8 +10,11 @@ import { Grid, AppBar, Toolbar, Card } from '@mui/material';
 
 import { Container } from '@mui/system';
 
-import { Teams_switch } from './components/Teams_switch';
-import { Drivers_switch } from './components/Drivers_switch';
+import { Teams_table } from './components/Teams_table';
+
+import { Teams_chart} from './components/Teams_chart';
+
+import { Teams_description } from './components/Teams_description';
 
 
 
@@ -35,41 +38,43 @@ export const Teams_stats = () => {
   return (
     <Container>
       <ThemeProvider theme={theme}>
-      <div className="App">
-      
-      {/* es la parte de arriba  */}  
-      <AppBar> 
-        <Toolbar>
-            <IconButton
-              size="large"
-              edge="start"
-              color="inherit"
-              aria-label="menu"
-              sx={{ mr: 2 }}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              F1 Stats
-            </Typography>
-            <Button color="inherit">Login</Button>
-          </Toolbar>
-        </AppBar>
-        <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-          <Grid item xs={12} sm={12} md={12} xl={12} >
-          <Card >
-            <Teams_switch></Teams_switch>
-          </Card>    
-          </Grid>
-          <Grid item xs={12} sm={12} md={12} xl={12} >
-          <Card >
-            <Drivers_switch></Drivers_switch>
-          </Card>    
-          </Grid>
-        </Grid> 
-        
+        {/* es la parte de arriba  */}  
+        <AppBar> 
+          <Toolbar>
 
-      </div>
+              <IconButton
+                size="large"
+                edge="start"
+                color="inherit"
+                aria-label="menu"
+                sx={{ mr: 2 }}
+              >
+                <MenuIcon />
+              </IconButton>
+
+              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                F1 Stats
+              </Typography>
+
+              <Button color="inherit">Login</Button>
+
+            </Toolbar>
+          </AppBar>
+          <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+            <Grid item xs={12} sm={12} md={12} xl={12} >
+              <Card >
+                <Teams_chart></Teams_chart>
+              </Card>  
+            </Grid>
+            <Grid item xs={12} sm={12} md={12} xl={12} >
+              <Card >
+                <Teams_table></Teams_table>
+              </Card> 
+            </Grid>
+            <Grid item xs={12} sm={12} md={12} xl={12} >
+              <Teams_description></Teams_description>
+            </Grid>
+          </Grid> 
       </ThemeProvider>
     </Container>
   )

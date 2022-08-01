@@ -44,10 +44,10 @@ const Home = () => {
                 {/* Los links */}
                 <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 2, xl:2 }}>
                     <Grid item xs={6} sm={6} md={6} xl={6}>
-                        <Link to="/Teams" className='tbtn'><Button variant='contained' text="Teams" color="secondary">Teams</Button></Link>
+                        <Link to="/WCC" className='tbtn'><Button variant='contained' text="Teams" color="secondary">WCC</Button></Link>
                     </Grid>
                     <Grid item xs={6} sm={6} md={6} xl={6}>
-                        <Link to="/Drivers" className='tbtn'><Button variant='contained' text="Drivers" color="secondary">Drivers</Button></Link>
+                        <Link to="/WDC" className='tbtn'><Button variant='contained' text="Drivers" color="secondary">WDC</Button></Link>
                     </Grid>
                 </Grid>
             </ThemeProvider>
