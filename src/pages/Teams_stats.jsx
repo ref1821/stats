@@ -16,6 +16,8 @@ import { Teams_chart} from './components/Teams_chart';
 
 import { Teams_description } from './components/Teams_description';
 
+import  Topbar  from './components/Topbar';
+
 
 
 
@@ -39,6 +41,8 @@ export const Teams_stats = () => {
     <Container>
       <ThemeProvider theme={theme}>
         {/* es la parte de arriba  */}  
+        <Topbar></Topbar>
+        {/*  
         <AppBar> 
           <Toolbar>
 
@@ -59,7 +63,7 @@ export const Teams_stats = () => {
               <Button color="inherit">Login</Button>
 
             </Toolbar>
-          </AppBar>
+          </AppBar>*/}
           <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
             <Grid item xs={12} sm={12} md={12} xl={12} >
               <Card >

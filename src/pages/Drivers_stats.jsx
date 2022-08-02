@@ -3,7 +3,10 @@ import { AppBar, Toolbar, IconButton, Typography, createTheme, Container, ThemeP
 import MenuIcon from '@mui/icons-material/Menu';
 import { red } from '@mui/material/colors';
 import {Drivers_switch} from './components/Drivers_switch'
+import {Drivers_chart} from './components/Drivers_chart'
+import {Drivers_description} from './components/Drivers_description'
 
+import Topbar from './components/Topbar'
 
 const theme = createTheme({
     palette: {
@@ -23,27 +26,12 @@ export const Drivers_stats = () => {
     <Container>
             <ThemeProvider theme={theme}>
                 {/* La parte de arriba */}
-                <AppBar> 
-                    <Toolbar>
-                        <IconButton
-                        size="large"
-                        edge="start"
-                        color="inherit"
-                        aria-label="menu"
-                        sx={{ mr: 2 }}
-                        >
-                            <MenuIcon />
-                        </IconButton>
-                        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                            F1 Stats
-                        </Typography>
-                        <Button color="inherit">Login</Button>
-                    </Toolbar>
-                </AppBar>
-
+                <Topbar></Topbar>
+                <Drivers_chart></Drivers_chart>
                 <Card >
                     <Drivers_switch></Drivers_switch>
                 </Card>
+                <Drivers_description></Drivers_description>
             </ThemeProvider>
         </Container>
   )

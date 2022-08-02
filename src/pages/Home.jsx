@@ -6,6 +6,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { red } from '@mui/material/colors';
 import './components/Home.css'
 
+import Topbar from './components/Topbar'
+
 const theme = createTheme({
     palette: {
       primary: {
@@ -23,23 +25,7 @@ const Home = () => {
         <Container>
             <ThemeProvider theme={theme}>
                 {/* La parte de arriba */}
-                <AppBar> 
-                    <Toolbar>
-                        <IconButton
-                        size="large"
-                        edge="start"
-                        color="inherit"
-                        aria-label="menu"
-                        sx={{ mr: 2 }}
-                        >
-                            <MenuIcon />
-                        </IconButton>
-                        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                            F1 Stats
-                        </Typography>
-                        <Button color="inherit">Login</Button>
-                    </Toolbar>
-                </AppBar>
+                <Topbar></Topbar>
 
                 {/* Los links */}
                 <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 2, xl:2 }}>

@@ -371,7 +371,7 @@ return (
                                     0 Wins
                                 </Grid>
                                 <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    12 Podios
+                                    11 Podios
                                 </Grid>
                                 <Grid item xs={6} sm={6} md={6} xl={6} >
                                     1 DNF

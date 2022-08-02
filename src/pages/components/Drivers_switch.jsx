@@ -23,7 +23,7 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
-import {Drivers_chart} from './Drivers_chart'
+
 
 const ExpandMore = styled((props) => {
     const { expand, ...other } = props;
@@ -36,31 +36,31 @@ const ExpandMore = styled((props) => {
     }),
   }));
 
-function createData(name, calories, fat, carbs, protein, miami,spain, monaco, baku, canada, silverstone, austria, francia) {
-    return { name, calories: calories, fat: fat, carbs, protein, miami, spain, monaco, baku, canada, silverstone, austria, francia };
+function createData(name, calories, fat, carbs, protein, miami,spain, monaco, baku, canada, silverstone, austria, francia, hungaroring) {
+    return { name, calories: calories, fat: fat, carbs, protein, miami, spain, monaco, baku, canada, silverstone, austria, francia, hungaroring };
   }
   
 const rows = [
-    createData('Verstappen', 0, 25, 0, 34, 26, 25, 15, 25, 25, 6, 27, 25),
-    createData('Perez', 0, 12, 18, 24, 12, 19, 25, 19, 0, 18, 4, 12),
-    createData('Leclerc', 26, 19, 26, 15, 18, 0, 12, 0, 10, 12, 32, 0),
-    createData('Sainz', 18, 15, 0, 5, 15, 12, 18, 0, 19, 25, 6, 11),
-    createData('Hamilton', 15, 1, 12, 0, 8, 10, 4, 12, 15, 16, 16, 18),
-    createData('Russel', 12, 10, 15, 12, 10, 15, 10, 15, 12, 0, 17, 15),
-    createData('Norris', 0, 6, 10, 19, 0, 4, 9, 2, 0, 8, 6, 6),
-    createData('Ricciardo', 0, 0, 8, 3, 0, 0, 0, 4, 0, 0, 2, 2),
-    createData('Alonso', 2, 0, 0, 0, 0, 2, 6, 6, 2, 10, 1, 8),
-    createData('Ocon', 6, 8, 6, 0, 4, 6, 0, 1, 8, 0, 13, 4),
-    createData('Bottas', 8, 0, 4, 12, 6, 8, 2, 0, 6, 0, 0, 0),
-    createData('Zhou', 1, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0),
-    createData('Magnussen', 10, 2, 0, 3, 0, 0, 0, 0, 0, 1, 6, 0),
-    createData('Schumacher', 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 8, 0),
-    createData('Gasly',0, 4, 2, 0, 0, 0, 0, 10, 0, 0, 0, 0),
-    createData('Tsunoda', 4, 0, 0, 6, 0, 1, 0, 0, 0, 0, 0, 0),
-    createData('Vettel', 0, 0, 0, 4, 0, 0, 1, 8, 0, 2, 0, 0),
-    createData('Stroll', 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1),
-    createData('Albon', 0, 0, 1, 0, 2, 0, 0, 0, 0, 0, 0, 0),
-    createData('Latifi', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+    createData('Verstappen', 0, 25, 0, 34, 26, 25, 15, 25, 25, 6, 27, 25, 25),
+    createData('Perez', 0, 12, 18, 24, 12, 19, 25, 19, 0, 18, 4, 12, 10),
+    createData('Leclerc', 26, 19, 26, 15, 18, 0, 12, 0, 10, 12, 32, 0, 8),
+    createData('Sainz', 18, 15, 0, 5, 15, 12, 18, 0, 19, 25, 6, 11, 12),
+    createData('Hamilton', 15, 1, 12, 0, 8, 10, 4, 12, 15, 16, 16, 18, 19),
+    createData('Russel', 12, 10, 15, 12, 10, 15, 10, 15, 12, 0, 17, 15, 15),
+    createData('Norris', 0, 6, 10, 19, 0, 4, 9, 2, 0, 8, 6, 6, 6),
+    createData('Ricciardo', 0, 0, 8, 3, 0, 0, 0, 4, 0, 0, 2, 2, 0),
+    createData('Alonso', 2, 0, 0, 0, 0, 2, 6, 6, 2, 10, 1, 8, 4),
+    createData('Ocon', 6, 8, 6, 0, 4, 6, 0, 1, 8, 0, 13, 4, 2),
+    createData('Bottas', 8, 0, 4, 12, 6, 8, 2, 0, 6, 0, 0, 0, 0),
+    createData('Zhou', 1, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0),
+    createData('Magnussen', 10, 2, 0, 3, 0, 0, 0, 0, 0, 1, 6, 0 ,0),
+    createData('Schumacher', 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 8, 0, 0),
+    createData('Gasly',0, 4, 2, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0 ),
+    createData('Tsunoda', 4, 0, 0, 6, 0, 1, 0, 0, 0, 0, 0, 0, 0),
+    createData('Vettel', 0, 0, 0, 4, 0, 0, 1, 8, 0, 2, 0, 0, 1),
+    createData('Stroll', 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0),
+    createData('Albon', 0, 0, 1, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0),
+    createData('Latifi', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
   ];
   
 
@@ -102,6 +102,7 @@ export const Drivers_switch = () => {
                                 <TableCell align="right">Silverstone</TableCell>
                                 <TableCell align="right">Austria</TableCell>
                                 <TableCell align="right">Paul Ricard</TableCell>
+                                <TableCell align="right">Hungaroring</TableCell>
                             </TableRow>
                             </TableHead>
                             <TableBody>
@@ -125,12 +126,13 @@ export const Drivers_switch = () => {
                                 <TableCell align="right">{row.silverstone}</TableCell>
                                 <TableCell align="right">{row.austria}</TableCell>
                                 <TableCell align="right">{row.francia}</TableCell>
+                                <TableCell align="right">{row.hungaroring}</TableCell>
                                 </TableRow>
                             ))}
                             </TableBody>
                         </Table>
                     </TableContainer>
-                    <Drivers_chart></Drivers_chart>
+                    
                 </Collapse>
             </Typography>
         </ThemeProvider>
