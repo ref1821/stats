@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { Grid, Card, styled, IconButton, Collapse, Typography } from '@mui/material'
+import { Grid, Card, styled, IconButton, Collapse, Typography, Divider } from '@mui/material'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
@@ -222,549 +222,495 @@ return (
     <div>
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
             {/* Tarjeta de Red Bull */}
-            <Grid item xs={12} sm={12} md={6} xl={12} >
+            <Grid item xs={12} sm={12} md={12} xl={12} >
                 <Card>
-                    <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                        <Grid item xs={12} sm={12} md={12} xl={12} >
-                            <Typography>RedBull
-                            <ExpandMore
-                            expand={expanded}
-                            onClick={handleExpandClick}
-                            aria-expanded={expanded}
-                            aria-label="show more"
-                            >
-                                <ExpandMoreIcon /> 
-                            </ExpandMore>
-                            </Typography>
+                    <Typography>Stats Per Team(SPT)</Typography>
+                    <ExpandMore
+                        expand={expanded}
+                        onClick={handleExpandClick}
+                        aria-expanded={expanded}
+                        aria-label="show more"
+                        >
+                            <ExpandMoreIcon /> 
+                    </ExpandMore>
+                    <Collapse in={expanded} timeout='auto' unmountOnExit>       
+                        <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+                            {/* Tarjeta de Red Bull */}
+                            <Grid item xs={12} sm={12} md={6} xl={12} >
+                                
+                                    <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+                                        <Grid item xs={12} sm={12} md={12} xl={12} >
+                                            <Typography>
+                                                RedBull
+                                            </Typography>
 
-                        </Grid>
-                        <Collapse in={expanded} timeout='auto' unmountOnExit>
-                            <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                                <Grid item xs={6} sm={6} md={6} xl={4} >
-                                    <Pie data={RBdata} options={options} />
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={4} >
-                                    <p>VER 60%</p>
-                                    <p>258 points (1°)</p>
-                                    <p>PER 40%</p>
-                                    <p>173 points (3°)</p>
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={4} >
-                                    <p>431 points </p>
-                                    <p>Provisional Champion</p>
-                                    
-                                    
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={4} >
-                                    (1°) WCC
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={4} >
-                                    9 Wins
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={4} >
-                                    16 Podios
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={4} >
-                                    5 DNF
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={4} >
-                                    1-2 (3 (Ita, Spa, Aze))
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={4} >
-                                    4 pole position
-                                </Grid>
+                                        </Grid>
+                                        
+                                            <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+                                                <Grid item xs={6} sm={6} md={6} xl={4} >
+                                                    <Pie data={RBdata} options={options} />
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={4} >
+                                                    <p>VER 60%</p>
+                                                    <p>258 points (1°)</p>
+                                                    <p>PER 40%</p>
+                                                    <p>173 points (3°)</p>
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={4} >
+                                                    <p>431 points </p>
+                                                    <p>Provisional Champion</p>
+                                                    
+                                                    
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={4} >
+                                                    (1°) WCC
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={4} >
+                                                    9 Wins
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={4} >
+                                                    16 Podios
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={4} >
+                                                    5 DNF
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={4} >
+                                                    1-2 (3 (Ita, Spa, Aze))
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={4} >
+                                                    4 pole position
+                                                </Grid>
+                                            </Grid>
+                                        
+                                    </Grid>
+                                <Divider/>
                             </Grid>
-                        </Collapse>
-                    </Grid>
-                </Card>
-            </Grid>
-            {/* Fin de la tarjeta de Red bull */}
-            {/* Ferrari */}
-            <Grid item xs={12} sm={12} md={6} xl={4} >
-            <Card>
-                    <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                        <Grid item xs={12} sm={12} md={12} xl={12} >
-                            <Typography>Ferrari
-                            <ExpandMore
-                            expand={expanded}
-                            onClick={handleExpandClick}
-                            aria-expanded={expanded}
-                            aria-label="show more"
-                            >
-                                <ExpandMoreIcon /> 
-                            </ExpandMore>
-                            </Typography>
+                            {/* Fin de la tarjeta de Red bull */}
+                            {/* Ferrari */}
+                            <Grid item xs={12} sm={12} md={6} xl={4} >
+                            
+                                    <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+                                        <Grid item xs={12} sm={12} md={12} xl={12} >
+                                            <Typography>Ferrari
+                                            </Typography>
 
-                        </Grid>
-                        <Collapse in={expanded} timeout='auto' unmountOnExit>
-                            <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                                <Grid item xs={8} sm={8} md={8} xl={8} >
-                                    <Pie data={Ferdata} options={options} />
-                                </Grid>
-                                <Grid item xs={4} sm={4} md={4} xl={4} >
-                                    <p>LEC 53%</p>
-                                    <p>178 points (2°)</p>
-                                    <p>SAI 47%</p>
-                                    <p>156 points (5°)</p>
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    334 points 
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    (2°) WCC
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    4 Wins
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    11 Podios
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    7 DNF
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    1-2 (1 (Bahrain))
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    8 pole position
-                                </Grid>
+                                        </Grid>
+                                        <Collapse in={expanded} timeout='auto' unmountOnExit>
+                                            <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+                                                <Grid item xs={8} sm={8} md={8} xl={8} >
+                                                    <Pie data={Ferdata} options={options} />
+                                                </Grid>
+                                                <Grid item xs={4} sm={4} md={4} xl={4} >
+                                                    <p>LEC 53%</p>
+                                                    <p>178 points (2°)</p>
+                                                    <p>SAI 47%</p>
+                                                    <p>156 points (5°)</p>
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    334 points 
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    (2°) WCC
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    4 Wins
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    11 Podios
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    7 DNF
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    1-2 (1 (Bahrain))
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    8 pole position
+                                                </Grid>
+                                            </Grid>
+                                            <Divider/>
+                                        </Collapse>
+                                    </Grid>
+                                
                             </Grid>
-                        </Collapse>
-                    </Grid>
-                </Card>
-            </Grid>
-            {/* Mercedes */}
-            <Grid item xs={12} sm={12} md={6} xl={4} >
-            <Card>
-                    <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                        <Grid item xs={12} sm={12} md={12} xl={12} >
-                            <Typography>Mercedes
-                            <ExpandMore
-                            expand={expanded}
-                            onClick={handleExpandClick}
-                            aria-expanded={expanded}
-                            aria-label="show more"
-                            >
-                                <ExpandMoreIcon /> 
-                            </ExpandMore>
-                            </Typography>
+                            {/* Mercedes */}
+                            <Grid item xs={12} sm={12} md={6} xl={4} >
+                            
+                                    <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+                                        <Grid item xs={12} sm={12} md={12} xl={12} >
+                                            <Typography>
+                                                Mercedes
+                                            </Typography>
 
-                        </Grid>
-                        <Collapse in={expanded} timeout='auto' unmountOnExit>
-                            <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                                <Grid item xs={8} sm={8} md={8} xl={8} >
-                                    <Pie data={Merdata} options={options} />
-                                </Grid>
-                                <Grid item xs={4} sm={4} md={4} xl={4} >
-                                    <p>HAM 48%</p>
-                                    <p>146 points (6°)</p>
-                                    <p>RUS 52%</p>
-                                    <p>158 points (3°)</p>
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    304 points 
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    (3°) WCC
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    0 Wins
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    11 Podios
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    1 DNF
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    1-2 (0)
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    1 pole position
-                                </Grid>
+                                        </Grid>
+                                        <Collapse in={expanded} timeout='auto' unmountOnExit>
+                                            <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+                                                <Grid item xs={8} sm={8} md={8} xl={8} >
+                                                    <Pie data={Merdata} options={options} />
+                                                </Grid>
+                                                <Grid item xs={4} sm={4} md={4} xl={4} >
+                                                    <p>HAM 48%</p>
+                                                    <p>146 points (6°)</p>
+                                                    <p>RUS 52%</p>
+                                                    <p>158 points (3°)</p>
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    304 points 
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    (3°) WCC
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    0 Wins
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    11 Podios
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    1 DNF
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    1-2 (0)
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    1 pole position
+                                                </Grid>
+                                            </Grid>
+                                            <Divider/>
+                                        </Collapse>
+                                    </Grid>
+                                
                             </Grid>
-                        </Collapse>
-                    </Grid>
-                </Card>
-            </Grid>
-            {/* Mclaren */}
-            <Grid item xs={12} sm={12} md={6} xl={4} >
-            <Card>
-                    <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                        <Grid item xs={12} sm={12} md={12} xl={12} >
-                            <Typography>Mclaren
-                            <ExpandMore
-                            expand={expanded}
-                            onClick={handleExpandClick}
-                            aria-expanded={expanded}
-                            aria-label="show more"
-                            >
-                                <ExpandMoreIcon /> 
-                            </ExpandMore>
-                            </Typography>
+                            {/* Mclaren */}
+                            <Grid item xs={12} sm={12} md={6} xl={4} >
+                            
+                                    <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+                                        <Grid item xs={12} sm={12} md={12} xl={12} >
+                                            <Typography>Mclaren</Typography>
 
-                        </Grid>
-                        <Collapse in={expanded} timeout='auto' unmountOnExit>
-                            <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                                <Grid item xs={8} sm={8} md={8} xl={8} >
-                                    <Pie data={Mcldata} options={options} />
-                                </Grid>
-                                <Grid item xs={4} sm={4} md={4} xl={4} >
-                                    <p>NOR 80%</p>
-                                    <p>76 points (7°)</p>
-                                    <p>RIC 20%</p>
-                                    <p>19 points (12°)</p>
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    95 points 
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    (5°) WCC
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    0 Wins
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    1 Podios
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    2 DNF
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    1-2 (0)
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    0 pole position
-                                </Grid>
+                                        </Grid>
+                                        <Collapse in={expanded} timeout='auto' unmountOnExit>
+                                            <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+                                                <Grid item xs={8} sm={8} md={8} xl={8} >
+                                                    <Pie data={Mcldata} options={options} />
+                                                </Grid>
+                                                <Grid item xs={4} sm={4} md={4} xl={4} >
+                                                    <p>NOR 80%</p>
+                                                    <p>76 points (7°)</p>
+                                                    <p>RIC 20%</p>
+                                                    <p>19 points (12°)</p>
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    95 points 
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    (5°) WCC
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    0 Wins
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    1 Podios
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    2 DNF
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    1-2 (0)
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    0 pole position
+                                                </Grid>
+                                            </Grid>
+                                        </Collapse>
+                                    </Grid>
+                                    <Divider/>
                             </Grid>
-                        </Collapse>
-                    </Grid>
-                </Card>
-            </Grid>
-            {/* Alpine */}
-            <Grid item xs={12} sm={12} md={6} xl={4} >
-            <Card>
-                    <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                        <Grid item xs={12} sm={12} md={12} xl={12} >
-                            <Typography>Alpine
-                            <ExpandMore
-                            expand={expanded}
-                            onClick={handleExpandClick}
-                            aria-expanded={expanded}
-                            aria-label="show more"
-                            >
-                                <ExpandMoreIcon /> 
-                            </ExpandMore>
-                            </Typography>
+                            {/* Alpine */}
+                            <Grid item xs={12} sm={12} md={6} xl={4} >
+                            
+                                    <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+                                        <Grid item xs={12} sm={12} md={12} xl={12} >
+                                            <Typography>Alpine
+                                            </Typography>
 
-                        </Grid>
-                        <Collapse in={expanded} timeout='auto' unmountOnExit>
-                            <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                                <Grid item xs={8} sm={8} md={8} xl={8} >
-                                    <Pie data={Alpdata} options={options} />
-                                </Grid>
-                                <Grid item xs={4} sm={4} md={4} xl={4} >
-                                    <p>ALO 41%</p>
-                                    <p>41 points (8°)</p>
-                                    <p>OCO 59%</p>
-                                    <p>58 points (10°)</p>
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    99 points 
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    (4°) WCC
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    0 Wins
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    0 Podios
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                     DNF
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    1-2 (0)
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    0 pole position
-                                </Grid>
+                                        </Grid>
+                                        <Collapse in={expanded} timeout='auto' unmountOnExit>
+                                            <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+                                                <Grid item xs={8} sm={8} md={8} xl={8} >
+                                                    <Pie data={Alpdata} options={options} />
+                                                </Grid>
+                                                <Grid item xs={4} sm={4} md={4} xl={4} >
+                                                    <p>ALO 41%</p>
+                                                    <p>41 points (8°)</p>
+                                                    <p>OCO 59%</p>
+                                                    <p>58 points (10°)</p>
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    99 points 
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    (4°) WCC
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    0 Wins
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    0 Podios
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    DNF
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    1-2 (0)
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    0 pole position
+                                                </Grid>
+                                            </Grid>
+                                        </Collapse>
+                                    </Grid>
+                                    <Divider/>
                             </Grid>
-                        </Collapse>
-                    </Grid>
-                </Card>
-            </Grid>
-            {/* Alfa Romeo */}
-            <Grid item xs={12} sm={12} md={6} xl={4} >
-            <Card>
-                    <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                        <Grid item xs={12} sm={12} md={12} xl={12} >
-                            <Typography>Alfa romeo
-                            <ExpandMore
-                            expand={expanded}
-                            onClick={handleExpandClick}
-                            aria-expanded={expanded}
-                            aria-label="show more"
-                            >
-                                <ExpandMoreIcon /> 
-                            </ExpandMore>
-                            </Typography>
+                            {/* Alfa Romeo */}
+                            <Grid item xs={12} sm={12} md={6} xl={4} >
+                            
+                                    <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+                                        <Grid item xs={12} sm={12} md={12} xl={12} >
+                                            <Typography>Alfa romeo
+                                            
+                                            </Typography>
 
-                        </Grid>
-                        <Collapse in={expanded} timeout='auto' unmountOnExit>
-                            <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                                <Grid item xs={8} sm={8} md={8} xl={8} >
-                                    <Pie data={AlRdata} options={options} />
-                                </Grid>
-                                <Grid item xs={4} sm={4} md={4} xl={4} >
-                                    <p>BOT 90%</p>
-                                    <p>46 points (7°)</p>
-                                    <p>ZHO 10%</p>
-                                    <p>5 points (12°)</p>
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    51 points 
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    (6°) WCC
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    0 Wins
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    0 Podios
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                     DNF
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    1-2 (0)
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    0 pole position
-                                </Grid>
+                                        </Grid>
+                                        <Collapse in={expanded} timeout='auto' unmountOnExit>
+                                            <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+                                                <Grid item xs={8} sm={8} md={8} xl={8} >
+                                                    <Pie data={AlRdata} options={options} />
+                                                </Grid>
+                                                <Grid item xs={4} sm={4} md={4} xl={4} >
+                                                    <p>BOT 90%</p>
+                                                    <p>46 points (7°)</p>
+                                                    <p>ZHO 10%</p>
+                                                    <p>5 points (12°)</p>
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    51 points 
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    (6°) WCC
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    0 Wins
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    0 Podios
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    DNF
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    1-2 (0)
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    0 pole position
+                                                </Grid>
+                                            </Grid>
+                                        </Collapse>
+                                    </Grid>
+                                    <Divider/>
                             </Grid>
-                        </Collapse>
-                    </Grid>
-                </Card>
-            </Grid>
-            {/* Haas */}
-            <Grid item xs={12} sm={12} md={6} xl={4} >
-            <Card>
-                    <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                        <Grid item xs={12} sm={12} md={12} xl={12} >
-                            <Typography>Haas
-                            <ExpandMore
-                            expand={expanded}
-                            onClick={handleExpandClick}
-                            aria-expanded={expanded}
-                            aria-label="show more"
-                            >
-                                <ExpandMoreIcon /> 
-                            </ExpandMore>
-                            </Typography>
+                            {/* Haas */}
+                            <Grid item xs={12} sm={12} md={6} xl={4} >
+                            
+                                    <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+                                        <Grid item xs={12} sm={12} md={12} xl={12} >
+                                            <Typography>Haas
+                                            
+                                            </Typography>
 
-                        </Grid>
-                        <Collapse in={expanded} timeout='auto' unmountOnExit>
-                            <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                                <Grid item xs={8} sm={8} md={8} xl={8} >
-                                    <Pie data={Haasdata} options={options} />
-                                </Grid>
-                                <Grid item xs={4} sm={4} md={4} xl={4} >
-                                    <p>Mag 65%</p>
-                                    <p>22 points (11°)</p>
-                                    <p>Msc 35%</p>
-                                    <p>12 points (15°)</p>
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    34 points 
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    (7°) WCC
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    0 Wins
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    0 Podios
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                     DNF
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    1-2 (0)
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    0 pole position
-                                </Grid>
+                                        </Grid>
+                                        <Collapse in={expanded} timeout='auto' unmountOnExit>
+                                            <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+                                                <Grid item xs={8} sm={8} md={8} xl={8} >
+                                                    <Pie data={Haasdata} options={options} />
+                                                </Grid>
+                                                <Grid item xs={4} sm={4} md={4} xl={4} >
+                                                    <p>Mag 65%</p>
+                                                    <p>22 points (11°)</p>
+                                                    <p>Msc 35%</p>
+                                                    <p>12 points (15°)</p>
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    34 points 
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    (7°) WCC
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    0 Wins
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    0 Podios
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    DNF
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    1-2 (0)
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    0 pole position
+                                                </Grid>
+                                            </Grid>
+                                        </Collapse>
+                                    </Grid>
+                                    <Divider/>
                             </Grid>
-                        </Collapse>
-                    </Grid>
-                </Card>
-            </Grid>
-            {/* Alpha Tauri */}
-            <Grid item xs={12} sm={12} md={6} xl={4} >
-            <Card>
-                    <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                        <Grid item xs={12} sm={12} md={12} xl={12} >
-                            <Typography>Alpha Tauri
-                            <ExpandMore
-                            expand={expanded}
-                            onClick={handleExpandClick}
-                            aria-expanded={expanded}
-                            aria-label="show more"
-                            >
-                                <ExpandMoreIcon /> 
-                            </ExpandMore>
-                            </Typography>
+                            {/* Alpha Tauri */}
+                            <Grid item xs={12} sm={12} md={6} xl={4} >
+                            
+                                    <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+                                        <Grid item xs={12} sm={12} md={12} xl={12} >
+                                            <Typography>Alpha Tauri
+                                            
+                                            </Typography>
 
-                        </Grid>
-                        <Collapse in={expanded} timeout='auto' unmountOnExit>
-                            <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                                <Grid item xs={8} sm={8} md={8} xl={8} >
-                                    <Pie data={AlTdata} options={options} />
-                                </Grid>
-                                <Grid item xs={4} sm={4} md={4} xl={4} >
-                                    <p>GAS 59%</p>
-                                    <p>16 points (7°)</p>
-                                    <p>TSU 41%</p>
-                                    <p>11 points (12°)</p>
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    27 points 
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    (8°) WCC
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    0 Wins
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    0 Podios
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                     DNF
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    1-2 (0)
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    0 pole position
-                                </Grid>
+                                        </Grid>
+                                        <Collapse in={expanded} timeout='auto' unmountOnExit>
+                                            <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+                                                <Grid item xs={8} sm={8} md={8} xl={8} >
+                                                    <Pie data={AlTdata} options={options} />
+                                                </Grid>
+                                                <Grid item xs={4} sm={4} md={4} xl={4} >
+                                                    <p>GAS 59%</p>
+                                                    <p>16 points (7°)</p>
+                                                    <p>TSU 41%</p>
+                                                    <p>11 points (12°)</p>
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    27 points 
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    (8°) WCC
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    0 Wins
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    0 Podios
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    DNF
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    1-2 (0)
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    0 pole position
+                                                </Grid>
+                                            </Grid>
+                                        </Collapse>
+                                    </Grid>
+                                    <Divider/>
                             </Grid>
-                        </Collapse>
-                    </Grid>
-                </Card>
-            </Grid>
-            {/* Aston Martin */}
-            <Grid item xs={12} sm={12} md={6} xl={4} >
-            <Card>
-                    <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                        <Grid item xs={12} sm={12} md={12} xl={12} >
-                            <Typography>Aston Martin
-                            <ExpandMore
-                            expand={expanded}
-                            onClick={handleExpandClick}
-                            aria-expanded={expanded}
-                            aria-label="show more"
-                            >
-                                <ExpandMoreIcon /> 
-                            </ExpandMore>
-                            </Typography>
+                            {/* Aston Martin */}
+                            <Grid item xs={12} sm={12} md={6} xl={4} >
+                            
+                                    <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+                                        <Grid item xs={12} sm={12} md={12} xl={12} >
+                                            <Typography>Aston Martin
+                                            
+                                            </Typography>
 
-                        </Grid>
-                        <Collapse in={expanded} timeout='auto' unmountOnExit>
-                            <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                                <Grid item xs={8} sm={8} md={8} xl={8} >
-                                    <Pie data={Astdata} options={options} />
-                                </Grid>
-                                <Grid item xs={4} sm={4} md={4} xl={4} >
-                                    <p>VET 80%</p>
-                                    <p>16 points (14°)</p>
-                                    <p>STR 20%</p>
-                                    <p>4 points (18°)</p>
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    20 points 
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    (9°) WCC
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    0 Wins
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    0 Podios
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                     DNF
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    1-2 (0)
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    0 pole position
-                                </Grid>
+                                        </Grid>
+                                        <Collapse in={expanded} timeout='auto' unmountOnExit>
+                                            <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+                                                <Grid item xs={8} sm={8} md={8} xl={8} >
+                                                    <Pie data={Astdata} options={options} />
+                                                </Grid>
+                                                <Grid item xs={4} sm={4} md={4} xl={4} >
+                                                    <p>VET 80%</p>
+                                                    <p>16 points (14°)</p>
+                                                    <p>STR 20%</p>
+                                                    <p>4 points (18°)</p>
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    20 points 
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    (9°) WCC
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    0 Wins
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    0 Podios
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    DNF
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    1-2 (0)
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    0 pole position
+                                                </Grid>
+                                            </Grid>
+                                        </Collapse>
+                                    </Grid>
+                                    <Divider/>
                             </Grid>
-                        </Collapse>
-                    </Grid>
-                </Card>
-            </Grid>
-            {/* Williams */}
-            <Grid item xs={12} sm={12} md={6} xl={4} >
-            <Card>
-                    <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                        <Grid item xs={12} sm={12} md={12} xl={12} >
-                            <Typography>Williams
-                            <ExpandMore
-                            expand={expanded}
-                            onClick={handleExpandClick}
-                            aria-expanded={expanded}
-                            aria-label="show more"
-                            >
-                                <ExpandMoreIcon /> 
-                            </ExpandMore>
-                            </Typography>
+                            {/* Williams */}
+                            <Grid item xs={12} sm={12} md={6} xl={4} >
+                            
+                                    <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+                                        <Grid item xs={12} sm={12} md={12} xl={12} >
+                                            <Typography>Williams
+                                            
+                                            </Typography>
 
-                        </Grid>
-                        <Collapse in={expanded} timeout='auto' unmountOnExit>
-                            <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                                <Grid item xs={8} sm={8} md={8} xl={8} >
-                                    <Pie data={Wildata} options={options} />
-                                </Grid>
-                                <Grid item xs={4} sm={4} md={4} xl={4} >
-                                    <p>ALB 100%</p>
-                                    <p>3 points (19°)</p>
-                                    <p>LAT 0%</p>
-                                    <p>0 points (20°)</p>
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    3 points 
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    (10°) WCC
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    0 Wins
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    0 Podios
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                     DNF
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    1-2 (0)
-                                </Grid>
-                                <Grid item xs={6} sm={6} md={6} xl={6} >
-                                    0 pole position
-                                </Grid>
+                                        </Grid>
+                                        <Collapse in={expanded} timeout='auto' unmountOnExit>
+                                            <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+                                                <Grid item xs={8} sm={8} md={8} xl={8} >
+                                                    <Pie data={Wildata} options={options} />
+                                                </Grid>
+                                                <Grid item xs={4} sm={4} md={4} xl={4} >
+                                                    <p>ALB 100%</p>
+                                                    <p>3 points (19°)</p>
+                                                    <p>LAT 0%</p>
+                                                    <p>0 points (20°)</p>
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    3 points 
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    (10°) WCC
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    0 Wins
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    0 Podios
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    DNF
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    1-2 (0)
+                                                </Grid>
+                                                <Grid item xs={6} sm={6} md={6} xl={6} >
+                                                    0 pole position
+                                                </Grid>
+                                            </Grid>
+                                        </Collapse>
+                                    </Grid>
+                                    <Divider/>
                             </Grid>
-                        </Collapse>
-                    </Grid>
-                </Card>
-            </Grid>
+                        </Grid>
+        </Collapse>
+        </Card>
+        </Grid>
         </Grid>
     </div>
   )
