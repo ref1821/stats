@@ -12,7 +12,7 @@ import {
     Legend,
   } from 'chart.js';
 
-import './Graficas.css'
+import '../../components/Elements/Graficas.css'
 
   ChartJS.register(
     CategoryScale,

@@ -1,22 +1,13 @@
 import * as React from 'react';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
 import {createTheme, ThemeProvider} from '@mui/material/styles';
 import {red} from '@mui/material/colors';
-import { Grid, AppBar, Toolbar, Card } from '@mui/material';
-
-
+import { Grid, Card } from '@mui/material';
 import { Container } from '@mui/system';
 
-import { Teams_table } from './components/Teams_table';
-
-import { Teams_chart} from './components/Teams_chart';
-
-import { Teams_description } from './components/Teams_description';
-
-import  Topbar  from './components/Topbar';
+import { Teams_table } from './components/Teams_carpet/Teams_table';
+import { Teams_chart} from './components/Teams_carpet/Teams_chart';
+import { Teams_description } from './components/Teams_carpet/Teams_description';
+import  Topbar  from './components/Elements/Topbar';
 
 
 

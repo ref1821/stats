@@ -2,11 +2,11 @@ import React from 'react'
 import { AppBar, Toolbar, IconButton, Typography, createTheme, Container, ThemeProvider, Grid, Button, Card } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { red } from '@mui/material/colors';
-import {Drivers_switch} from './components/Drivers_switch'
-import {Drivers_chart} from './components/Drivers_chart'
-import {Drivers_description} from './components/Drivers_description'
+import {Drivers_switch} from './components/Drivers_carpet/Drivers_switch'
+import {Drivers_chart} from './components/Drivers_carpet/Drivers_chart'
+import {Drivers_description} from './components/Drivers_carpet/Drivers_description'
 
-import Topbar from './components/Topbar'
+import Topbar from './components/Elements/Topbar'
 
 const theme = createTheme({
     palette: {

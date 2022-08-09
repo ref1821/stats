@@ -4,9 +4,9 @@ import { Button } from '@mui/material'
 import { AppBar, Toolbar, IconButton, Typography, createTheme, Container, ThemeProvider, Grid } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { red } from '@mui/material/colors';
-import './components/Home.css'
+import './components/Elements/Home.css'
 
-import Topbar from './components/Topbar'
+import Topbar from './components/Elements/Topbar'
 
 const theme = createTheme({
     palette: {
