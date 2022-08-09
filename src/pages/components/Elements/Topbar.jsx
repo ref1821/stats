@@ -9,7 +9,7 @@ import {
   Box, 
   CssBaseline,
   AppBar, Toolbar,
-  Typography, Button, IconButton, Drawer, Divider, ListItemButton, } from "@mui/material";
+  Typography, Button, IconButton, Drawer, Divider, ListItemButton, createTheme, ThemeProvider} from "@mui/material";
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
@@ -34,6 +34,17 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   justifyContent: 'flex-end',
 }));
 
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+    primary: {
+      main:'#b71540',
+    },
+    secondary:{
+      main:'#1e3799',
+    },
+  },
+});
 
 const Topbar= props => {
   const theme = useTheme();
@@ -68,10 +79,11 @@ const Topbar= props => {
   ];
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <ThemeProvider theme={darkTheme}>
+    <Box sx={{ display: 'flex' }} color="primary">
       {/* Appbar */}
-      <AppBar> 
-          <Toolbar>
+      <AppBar > 
+          <Toolbar >
 
               <IconButton
                 size="large"
@@ -85,7 +97,7 @@ const Topbar= props => {
               </IconButton>
 
               <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                F1 Stats
+                It´s stats out
               </Typography>
 
               <Button color="inherit">Login</Button>
@@ -126,6 +138,7 @@ const Topbar= props => {
         <Divider />
       </Drawer>
     </Box>
+    </ThemeProvider>
   );
 }
 
