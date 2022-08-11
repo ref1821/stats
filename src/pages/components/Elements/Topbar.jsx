@@ -36,12 +36,8 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 
 const darkTheme = createTheme({
   palette: {
-    mode: 'dark',
     primary: {
-      main:'#b71540',
-    },
-    secondary:{
-      main:'#1e3799',
+      main:'#b33939',
     },
   },
 });

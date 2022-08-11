@@ -3,26 +3,28 @@ import {createTheme, ThemeProvider} from '@mui/material/styles';
 import {red} from '@mui/material/colors';
 import { Grid, Card } from '@mui/material';
 import { Container } from '@mui/system';
-
+import CssBaseline from '@mui/material/CssBaseline';
 import { Teams_table } from './components/Teams_carpet/Teams_table';
 import { Teams_chart} from './components/Teams_carpet/Teams_chart';
 import { Teams_description } from './components/Teams_carpet/Teams_description';
 import  Topbar  from './components/Elements/Topbar';
 
-
-
-
-
-const theme = createTheme({
+const darkTheme = createTheme({
   palette: {
+    mode: 'dark',
     primary: {
-      main: red[600],
+      main:'#b71540',
     },
-    secondary: {
-      main: red[200],
+    secondary:{
+      main:'#1e3799',
     },
-}
-})
+    
+  },
+});
+
+
+
+
 
 const label = { inputProps: { 'aria-label': 'Switch demo' } };
 
@@ -30,7 +32,8 @@ const label = { inputProps: { 'aria-label': 'Switch demo' } };
 export const Teams_stats = () => {
   return (
     <Container>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={darkTheme}>
+      <CssBaseline />
         {/* es la parte de arriba  */}  
         <Topbar></Topbar>
           <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>

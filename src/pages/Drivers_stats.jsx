@@ -5,26 +5,29 @@ import { red } from '@mui/material/colors';
 import {Drivers_switch} from './components/Drivers_carpet/Drivers_switch'
 import {Drivers_chart} from './components/Drivers_carpet/Drivers_chart'
 import {Drivers_description} from './components/Drivers_carpet/Drivers_description'
-
+import CssBaseline from '@mui/material/CssBaseline';
 import Topbar from './components/Elements/Topbar'
 
-const theme = createTheme({
-    palette: {
-      primary: {
-        main: red[600],
-      },
-      secondary: {
-        main: red[200],
-      },
-  }
-})
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+    primary: {
+      main:'#b71540',
+    },
+    secondary:{
+      main:'#1e3799',
+    },
+    
+  },
+});
 
 
 
 export const Drivers_stats = () => {
   return (
     <Container>
-            <ThemeProvider theme={theme}>
+            <ThemeProvider theme={darkTheme}>
+              <CssBaseline/>
                 {/* La parte de arriba */}
                 <Topbar></Topbar>
                 <Drivers_chart></Drivers_chart>

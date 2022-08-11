@@ -1,25 +1,10 @@
-import React, {useState}from 'react'
-import { Grid, Card, styled, IconButton, Collapse, Typography } from '@mui/material'
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
-import { Pie } from 'react-chartjs-2';
-import '../../components/Elements/Graficas.css'
+import React, {useEffect}from 'react'
+import { collection, getDocs } from 'firebase/firestore'
+import { Grid } from '@mui/material'
 import {Drivers_card} from './Drivers_card'
+import db from '../../../firebase'
+import '../../components/Elements/Graficas.css'
 
-ChartJS.register(
-    ArcElement, Tooltip, Legend
-  );
-
-const ExpandMore = styled((props) => {
-    const { expand, ...other } = props;
-    return <IconButton {...other} />;
-  })(({ theme, expand }) => ({
-    transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
-    marginLeft: 'auto',
-    transition: theme.transitions.create('transform', {
-      duration: theme.transitions.duration.shortest,
-    }),
-  }));
 
 export const options = {
     responsive: true,
@@ -497,15 +482,19 @@ export const Latdata = {
   ],
 };
 export const Drivers_description = () => {
-    const [expanded, setExpanded] = useState(false);
-
-    const handleExpandClick = () => {
-        setExpanded(!expanded);
-    };
+    useEffect(()=>{
+      const obtenerDatos = async() =>{
+        const datos = await getDocs(collection(db, 'drivers'))
+        var Ver=datos.docs[0].data.points()
+        console.log(datos.docs[1].data())
+        console.log(Ver)
+      }
+      obtenerDatos();
+    }, []);
 
   return (
     <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>  
-        <Drivers_card name="Verstappen" points='258' position='1' datas={Verdata} size={6} wins={8} podiums='10' pole='3' dnf='2'></Drivers_card>
+        <Drivers_card name="Verstappen" points={258} position='1' datas={Verdata} size={6} wins={8} podiums='10' pole='3' dnf='2'></Drivers_card>
         <Drivers_card name="Leclerc" points='178' position='2' datas={Lecdata} size={6} wins={3} podiums='5' pole='7' dnf='3'></Drivers_card>
         <Drivers_card name="Perez" points='173' position='3' datas={Perdata} size={4} wins={8} podiums='10' pole='3' dnf='2'></Drivers_card>
         <Drivers_card name="Russel" points='158' position='4' datas={Rusdata} size={4} wins={0} podiums='6' pole='1' dnf='1'></Drivers_card>
@@ -525,6 +514,7 @@ export const Drivers_description = () => {
         <Drivers_card name="Stroll" points='4' position='18' datas={Strdata} size={4} wins={0} podiums='0' pole='0' dnf='1'></Drivers_card>
         <Drivers_card name="Albon" points='3' position='19' datas={Albdata} size={4} wins={0} podiums='0' pole='0' dnf='1'></Drivers_card>
         <Drivers_card name="Latifi" points='0' position='20' datas={Latdata} size={4} wins={0} podiums='0' pole='0' dnf='3'></Drivers_card>
+        
     </Grid>
   )
 }

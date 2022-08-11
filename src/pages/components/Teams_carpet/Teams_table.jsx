@@ -36,32 +36,7 @@ const ExpandMore = styled((props) => {
     }),
   }));
 
-const theme = createTheme({
-    components:{
-        typography:{
-            fontFamily:[
-                '-apple-system',
-                'BlinkMacSystemFont',
-                '"Segoe UI"',
-                'Roboto',
-                '"Helvetica Neue"',
-                'Arial',
-                'sans-serif',
-                '"Apple Color Emoji"',
-                '"Segoe UI Emoji"',
-                '"Segoe UI Symbol"'
-            ]
-        }
-    },
-    palette: {
-        primary: {
-            main: red[600],
-        },
-        secondary:{
-            main: teal[500],
-        },
-    },
-})
+
 
 function createData(name, calories, fat, carbs, protein, miami,spain, monaco, baku, canada, silverstone, austria, francia, hungria) {
     return { name, calories: calories, fat: fat, carbs, protein, miami, spain, monaco, baku, canada, silverstone, austria, francia, hungria };
