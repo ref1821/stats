@@ -30,11 +30,15 @@ export const Drivers_stats = () => {
               <CssBaseline/>
                 {/* La parte de arriba */}
                 <Topbar></Topbar>
-                <Drivers_chart></Drivers_chart>
+                <Card>
+                  <Drivers_chart></Drivers_chart>
+                </Card>
                 <Card >
                     <Drivers_switch></Drivers_switch>
                 </Card>
-                <Drivers_description></Drivers_description>
+                <Card>
+                  <Drivers_description></Drivers_description>
+                </Card>
             </ThemeProvider>
         </Container>
   )
