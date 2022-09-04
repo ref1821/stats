@@ -27,16 +27,16 @@ export const options = {
     maintainAspectRatio: false,
 };
 
-const Ver = 284
-const Per = 191
-const Lec = 186
-const Sai = 171
-const Ham = 146
-const Rus = 170
-const Nor = 76
+const Ver = 310
+const Per = 201
+const Lec = 201
+const Sai = 175
+const Ham = 158
+const Rus = 188
+const Nor = 82
 const Ric = 19
-const Alo = 51
-const Oco = 64
+const Alo = 59
+const Oco = 66
 const Bot = 46
 const Zho = 5
 const Mag = 22
@@ -44,7 +44,7 @@ const Msc = 12
 const Gas = 18
 const Tsu = 11
 const Vet = 20
-const Str = 4
+const Str = 5
 const Alb = 4
 const Lat = 0
 
@@ -319,14 +319,14 @@ return (
                     </ExpandMore>
                     <Collapse in={expanded} timeout='auto' unmountOnExit>       
                         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 1, md: 1, xl: 1.5 }}>    
-                            <Teams_card name='Red Bull' size={12} piesize={6} data={RBdata} driverOne={'VER '+ verPor} positionOne={1} onePoints={Ver} driverTwo={'PER '+ perPor} positionTwo={2} twoPoints={Per} points={Ver+Per} position={1} wins={10} podiums={18} dnf={5} pole={4}></Teams_card>
-                            <Teams_card name='Ferrari' size={4} piesize={7} data={Ferdata} driverOne={'LEC '+ lecPor} positionOne={3} onePoints={Lec} driverTwo={'SAI '+ saiPor} positionTwo={4} twoPoints={Sai} points={Lec+Sai} position={2} wins={4} podiums={12} dnf={7} pole={9}></Teams_card>
-                            <Teams_card name='Mercedes' size={4} piesize={7} data={Merdata} driverOne={'HAM '+ hamPor} positionOne={6} onePoints={Ham} driverTwo={'RUS '+ rusPor} positionTwo={5} twoPoints={Rus} points={Ham+Rus} position={3} wins={0} podiums={11} dnf={2} pole={1}></Teams_card>
+                            <Teams_card name='Red Bull' size={12} piesize={6} data={RBdata} driverOne={'VER '+ verPor} positionOne={1} onePoints={Ver} driverTwo={'PER '+ perPor} positionTwo={2} twoPoints={Per} points={Ver+Per} position={1} wins={11} podiums={19} dnf={5} pole={5}></Teams_card>
+                            <Teams_card name='Ferrari' size={4} piesize={7} data={Ferdata} driverOne={'LEC '+ lecPor} positionOne={3} onePoints={Lec} driverTwo={'SAI '+ saiPor} positionTwo={4} twoPoints={Sai} points={Lec+Sai} position={2} wins={4} podiums={13} dnf={7} pole={9}></Teams_card>
+                            <Teams_card name='Mercedes' size={4} piesize={7} data={Merdata} driverOne={'HAM '+ hamPor} positionOne={6} onePoints={Ham} driverTwo={'RUS '+ rusPor} positionTwo={5} twoPoints={Rus} points={Ham+Rus} position={3} wins={0} podiums={12} dnf={2} pole={1}></Teams_card>
                             <Teams_card name='Mclaren' size={4} piesize={7} data={Mcldata} driverOne={'NOR '+ norPor} positionOne={7} onePoints={Nor} driverTwo={'RIC '+ ricPor} positionTwo={13} twoPoints={Ric} points={Nor+Ric} position={4} wins={0} podiums={1} dnf={2} pole={0}></Teams_card>
                             <Teams_card name='Alpine' size={4} piesize={7} data={Alpdata} driverOne={'ALO '+ aloPor} positionOne={9} onePoints={Alo} driverTwo={'OCO '+ ocoPor} positionTwo={8} twoPoints={Oco} points={Alo+Oco} position={5} wins={0} podiums={0} dnf={3} pole={0}></Teams_card>
-                            <Teams_card name='Alfa Romeo' size={4} piesize={7} data={AlRdata} driverOne={'BOT '+ botPor} positionOne={10} onePoints={Bot} driverTwo={'ZHO '+ zhoPor} positionTwo={17} twoPoints={Zho} points={Bot+Zho} position={6} wins={0} podiums={0} dnf={8} pole={0}></Teams_card>
+                            <Teams_card name='Alfa Romeo' size={4} piesize={7} data={AlRdata} driverOne={'BOT '+ botPor} positionOne={10} onePoints={Bot} driverTwo={'ZHO '+ zhoPor} positionTwo={17} twoPoints={Zho} points={Bot+Zho} position={6} wins={0} podiums={0} dnf={9} pole={0}></Teams_card>
                             <Teams_card name='Haas' size={4} piesize={7} data={Haasdata} driverOne={'MAG '+ magPor} positionOne={11} onePoints={Mag} driverTwo={'MSC '+ mscPor} positionTwo={15} twoPoints={Msc} points={Mag+Msc} position={7} wins={0} podiums={0} dnf={7} pole={0}></Teams_card>
-                            <Teams_card name='Alpha Tauri' size={4} piesize={7} data={AlTdata} driverOne={'GAS '+ gasPor} positionOne={14} onePoints={Gas} driverTwo={'TSU '+ tsuPor} positionTwo={16} twoPoints={Tsu} points={Gas+Tsu} position={8} wins={0} podiums={0} dnf={6} pole={0}></Teams_card>
+                            <Teams_card name='Alpha Tauri' size={4} piesize={7} data={AlTdata} driverOne={'GAS '+ gasPor} positionOne={14} onePoints={Gas} driverTwo={'TSU '+ tsuPor} positionTwo={16} twoPoints={Tsu} points={Gas+Tsu} position={8} wins={0} podiums={0} dnf={7} pole={0}></Teams_card>
                             <Teams_card name='Aston Martin' size={4} piesize={7} data={Astdata} driverOne={'VET '+ vetPor} positionOne={12} onePoints={Vet} driverTwo={'STR '+ strPor} positionTwo={19} twoPoints={Str} points={Vet+Str} position={9} wins={0} podiums={0} dnf={5} pole={0}></Teams_card>
                             <Teams_card name='Williams' size={4} piesize={7} data={Wildata} driverOne={'ALB '+ albPor} positionOne={18} onePoints={Alb} driverTwo={'LAT '+ latPor} positionTwo={20} twoPoints={Lat} points={Alb+Lat} position={10} wins={0} podiums={0} dnf={4} pole={0}></Teams_card>    
                         </Grid>
