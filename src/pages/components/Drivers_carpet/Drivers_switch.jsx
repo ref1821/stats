@@ -36,31 +36,31 @@ const ExpandMore = styled((props) => {
     }),
   }));
 
-function createData(name, calories, fat, carbs, protein, miami,spain, monaco, baku, canada, silverstone, austria, francia, hungaroring, spa, zandvoort) {
-    return { name, calories: calories, fat: fat, carbs, protein, miami, spain, monaco, baku, canada, silverstone, austria, francia, hungaroring, spa, zandvoort };
+function createData(name, calories, fat, carbs, protein, miami,spain, monaco, baku, canada, silverstone, austria, francia, hungaroring, spa, zandvoort, monza, singapore) {
+    return { name, calories: calories, fat: fat, carbs, protein, miami, spain, monaco, baku, canada, silverstone, austria, francia, hungaroring, spa, zandvoort, monza, singapore };
   }
   
 const rows = [
-    createData('Verstappen', 'DNF', 25, 'DNF', 34, 26, 25, 15, 25, 25, 6, 27, 25, 25, 26, 26),
-    createData('Perez', 'DNF', 12, 18, 24, 12, 19, 25, 19, 'DNF', 18, '4(DNF)', 12, 10, 18, 10),
-    createData('Leclerc', 26, 19, 26, 15, 18, 'DNF', 12, 'DNF', 10, 12, 32, 'DNF', 8, 8, 15),
-    createData('Sainz', 18, 15, 'DNF', '5(DNF)', 15, 12, 18, 'DNF', 19, 25, '6(DNF)', 11, 12, 15, 4),
-    createData('Hamilton', 15, 1, 12, 0, 8, 10, 4, 12, 15, 16, 16, 18, 19, 'DNF', 12),
-    createData('Russel', 12, 10, 15, 12, 10, 15, 10, 15, 12, 'DNF', 17, 15, 15, 12, 18),
-    createData('Norris', 0, 6, 10, 19, 'DNF', 4, 9, 2, 0, 8, 6, 6, 6, 0, 6),
-    createData('Ricciardo', 0, 'DNF', 8, 3, 0, 0, 0, 4, 0, 0, 2, 2, 0, 0, 0),
-    createData('Alonso', 2, 'DNF', 0, 'DNF', 0, 2, 6, 6, 2, 10, 1, 8, 4, 10, 8),
-    createData('Ocon', 6, 8, 6, 0, 4, 6, 0, 1, 8, 'DNF', 13, 4, 2, 6, 2),
-    createData('Bottas', 8, 'DNF', 4, 12, 6, 8, 2, 0, 6, 'DNF', 0, 0, 'DNF', 'DNF', 'DNF'),
-    createData('Zhou', 1, 0, 0, 0, 'DNF', 'DNF', 0, 'DNF', 4, 'DNF', 0, 0, 0, 0, 0),
-    createData('Magnussen', 10, 2, 0, 3, 'DNF', 0, 'DNF', 'DNF', 0, 1, 6, 'DNF',0 , 0, 0),
-    createData('Schumacher', 0, 'DNS', 0, 0, 0, 0, 'DNF', 0, 'DNF', 4, 8, 0, 0, 0, 0),
-    createData('Gasly', 'DNF', 4, 2, 0, 'DNF', 0, 0, 10, 0, 'DNF', 0, 0, 0, 2, 0),
-    createData('Tsunoda', 4, 'DNS', 0, 6, 0, 1, 0, 0, 'DNF', 0, 0, 'DNF', 0, 0, 0),
-    createData('Vettel', '-', '-', 'DNF', 4, 'DNF', 0, 1, 8, 0, 2, 0, 0, 1, 4, 0),
-    createData('Stroll', 0, 0, 0, 1, 1, 0, 0, 'DNF', 1, 0, 0, 1, 0, 0, 1),
-    createData('Albon', 0, 'DNF', 1, 0, 2, 0, 'DNF', 0, 0, 'DNF', 0, 0, 0, 1, 0),
-    createData('Latifi', 0, 'DNF', 0, 0, 0, 0, 0, 0, 0, 0, 'DNF', 'DNF', 0, 0, 0),
+    createData('Verstappen', 'DNF', 25, 'DNF', 34, 26, 25, 15, 25, 25, 6, 27, 25, 25, 26, 26, 25, 6),
+    createData('Perez', 'DNF', 12, 18, 24, 12, 19, 25, 19, 'DNF', 18, '4(DNF)', 12, 10, 18, 10, 9, 25),
+    createData('Leclerc', 26, 19, 26, 15, 18, 'DNF', 12, 'DNF', 10, 12, 32, 'DNF', 8, 8, 15, 18, 18),
+    createData('Sainz', 18, 15, 'DNF', '5(DNF)', 15, 12, 18, 'DNF', 19, 25, '6(DNF)', 11, 12, 15, 4, 12, 15),
+    createData('Hamilton', 15, 1, 12, 0, 8, 10, 4, 12, 15, 16, 16, 18, 19, 'DNF', 12, 10, 2),
+    createData('Russel', 12, 10, 15, 12, 10, 15, 10, 15, 12, 'DNF', 17, 15, 15, 12, 18, 15, 0),
+    createData('Norris', 0, 6, 10, 19, 'DNF', 4, 9, 2, 0, 8, 6, 6, 6, 0, 6, 6, 12),
+    createData('Ricciardo', 0, 'DNF', 8, 3, 0, 0, 0, 4, 0, 0, 2, 2, 0, 0, 0, 'DNF', 10),
+    createData('Alonso', 2, 'DNF', 0, 'DNF', 0, 2, 6, 6, 2, 10, 1, 8, 4, 10, 8, 'DNF', 'DNF'),
+    createData('Ocon', 6, 8, 6, 0, 4, 6, 0, 1, 8, 'DNF', 13, 4, 2, 6, 2, 0, 'DNF'),
+    createData('Bottas', 8, 'DNF', 4, 12, 6, 8, 2, 0, 6, 'DNF', 0, 0, 'DNF', 'DNF', 'DNF', 0, 0),
+    createData('Zhou', 1, 0, 0, 0, 'DNF', 'DNF', 0, 'DNF', 4, 'DNF', 0, 0, 0, 0, 0, 1, 0),
+    createData('Magnussen', 10, 2, 0, 3, 'DNF', 0, 'DNF', 'DNF', 0, 1, 6, 'DNF',0 , 0, 0, 0, 0),
+    createData('Schumacher', 0, 'DNS', 0, 0, 0, 0, 'DNF', 0, 'DNF', 4, 8, 0, 0, 0, 0, 0, 0),
+    createData('Gasly', 'DNF', 4, 2, 0, 'DNF', 0, 0, 10, 0, 'DNF', 0, 0, 0, 2, 0, 4, 1),
+    createData('Tsunoda', 4, 'DNS', 0, 6, 0, 1, 0, 0, 'DNF', 0, 0, 'DNF', 0, 0, 0, 0, 'DNF'),
+    createData('Vettel', '-', '-', 'DNF', 4, 'DNF', 0, 1, 8, 0, 2, 0, 0, 1, 4, 0, 'DNF', 4),
+    createData('Stroll', 0, 0, 0, 1, 1, 0, 0, 'DNF', 1, 0, 0, 1, 0, 0, 1, 'DNF', 8),
+    createData('Albon', 0, 'DNF', 1, 0, 2, 0, 'DNF', 0, 0, 'DNF', 0, 0, 0, 1, 0, 'DNS', 'DNF'),
+    createData('Latifi', 0, 'DNF', 0, 0, 0, 0, 0, 0, 0, 0, 'DNF', 'DNF', 0, 0, 0, 0, 'DNF'),
   ];
   
 
@@ -105,6 +105,8 @@ export const Drivers_switch = () => {
                                 <TableCell align="right">Hungaroring</TableCell>
                                 <TableCell align="right">SPA-FRANCORCHAMPS</TableCell>
                                 <TableCell align="right">ZANDVOORT</TableCell>
+                                <TableCell align="right">MONZA</TableCell>
+                                <TableCell align="right">SINGAPORE</TableCell>
                             </TableRow>
                             </TableHead>
                             <TableBody>
@@ -131,6 +133,8 @@ export const Drivers_switch = () => {
                                 <TableCell align="right">{row.hungaroring}</TableCell>
                                 <TableCell align="right">{row.spa}</TableCell>
                                 <TableCell align="right">{row.zandvoort}</TableCell>
+                                <TableCell align="right">{row.monza}</TableCell>
+                                <TableCell align="right">{row.singapore}</TableCell>
                                 </TableRow>
                             ))}
                             </TableBody>

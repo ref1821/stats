@@ -1,22 +1,22 @@
 import React from 'react'
-export const Ver = 325
-export const Per = 210
-export const Lec = 219
-export const Sai = 187
-export const Ham = 168
+export const Ver = 341
+export const Per = 235
+export const Lec = 237
+export const Sai = 202
+export const Ham = 170
 export const Rus = 203
-export const Nor = 88
-export const Ric = 19
+export const Nor = 100
+export const Ric = 29
 export const Alo = 59
 export const Oco = 66
 export const Mag = 22
 export const Msc = 12
 export const Bot = 46
 export const Zho = 6
-export const Gas = 22
+export const Gas = 23
 export const Tsu = 11
-export const Vet = 20
-export const Str = 5
+export const Vet = 24
+export const Str = 13
 export const Alb = 4
 export const Lat = 0
 export const Dev = 2
@@ -29,7 +29,7 @@ export const Verdata = {
     datasets: [
       {
         label: 'RACES',
-        data: [11, 2, 1, 2],
+        data: [11, 2, 2, 2],
         backgroundColor: [
           '#ffd32a',
           '#d2dae2',
@@ -51,7 +51,7 @@ export const Lecdata = {
     datasets: [
       {
         label: 'RACES',
-        data: [3, 4, 6, 3],
+        data: [3, 5, 6, 3],
         backgroundColor: [
           '#ffd32a',
           '#d2dae2',
@@ -73,7 +73,7 @@ export const Perdata = {
     datasets: [
       {
         label: 'RACES',
-        data: [1, 6, 6, 3],
+        data: [2, 6, 6, 3],
         backgroundColor: [
           '#ffd32a',
           '#d2dae2',
@@ -91,21 +91,23 @@ export const Perdata = {
     ],
 };
 export const Rusdata = {
-  labels: ['WINS', 'PODIUM','POINTS FINISH', 'DNF'],
+  labels: ['WINS', 'PODIUM','POINTS FINISH','No points', 'DNF'],
   datasets: [
     {
       label: 'RACES',
-      data: [0, 8, 7, 1],
+      data: [0, 8, 7, 1, 1],
       backgroundColor: [
         '#ffd32a',
         '#d2dae2',
         '#05c46b',
+        '#ff6348',
         '#ff3f34',
       ],
       borderColor: [
         '#ffd32a',
         '#d2dae2',
-         '#05c46b',
+        '#05c46b',
+        '#ff6348',
         '#ff3f34',
       ],
       borderWidth: 1,
@@ -117,7 +119,7 @@ export const Saidata = {
     datasets: [
       {
         label: 'RACES',
-        data: [1, 6, 5, 4],
+        data: [1, 7, 5, 4],
         backgroundColor: [
           '#ffd32a',
           '#d2dae2',
@@ -139,7 +141,7 @@ export const Hamdata = {
   datasets: [
     {
       label: 'RACES',
-      data: [0, 6, 8, 1, 1],
+      data: [0, 6, 9, 1, 1],
       backgroundColor: [
         '#ffd32a',
         '#d2dae2',
@@ -163,7 +165,7 @@ export const Nordata = {
   datasets: [
     {
       label: 'RACES',
-      data: [0, 1, 11, 2, 2],
+      data: [0, 1, 12, 2, 2],
       backgroundColor: [
         '#ffd32a',
         '#d2dae2',
@@ -187,7 +189,7 @@ export const Ocodata = {
   datasets: [
     {
       label: 'RACES',
-      data: [0, 0, 12, 2, 2],
+      data: [0, 0, 12, 2, 3],
       backgroundColor: [
         '#ffd32a',
         '#d2dae2',
@@ -211,7 +213,7 @@ export const Botdata = {
   datasets: [
     {
       label: 'RACES',
-      data: [0, 0, 7, 4, 5],
+      data: [0, 0, 7, 5, 5],
       backgroundColor: [
         '#ffd32a',
         '#d2dae2',
@@ -235,7 +237,7 @@ export const Alodata = {
   datasets: [
     {
       label: 'RACES',
-      data: [0, 0, 11, 2, 3],
+      data: [0, 0, 11, 2, 4],
       backgroundColor: [
         '#ffd32a',
         '#d2dae2',
@@ -259,7 +261,7 @@ export const Magdata = {
   datasets: [
     {
       label: 'RACES',
-      data: [0, 0, 5, 7, 4],
+      data: [0, 0, 5, 8, 4],
       backgroundColor: [
         '#ffd32a',
         '#d2dae2',
@@ -283,7 +285,7 @@ export const Ricdata = {
   datasets: [
     {
       label: 'RACES',
-      data: [0, 0, 5, 9, 2],
+      data: [0, 0, 6, 9, 2],
       backgroundColor: [
         '#ffd32a',
         '#d2dae2',
@@ -307,7 +309,7 @@ export const Gasdata = {
   datasets: [
     {
       label: 'RACES',
-      data: [0, 0, 5, 8, 3],
+      data: [0, 0, 6, 8, 3],
       backgroundColor: [
         '#ffd32a',
         '#d2dae2',
@@ -331,7 +333,7 @@ export const Vetdata = {
   datasets: [
     {
       label: 'RACES',
-      data: [0, 0, 6, 5, 5],
+      data: [0, 0, 7, 5, 5],
       backgroundColor: [
         '#ffd32a',
         '#d2dae2',
@@ -355,7 +357,7 @@ export const Mscdata = {
   datasets: [
     {
       label: 'RACES',
-      data: [0, 0, 2, 11, 3],
+      data: [0, 0, 2, 12, 3],
       backgroundColor: [
         '#ffd32a',
         '#d2dae2',
@@ -379,7 +381,7 @@ export const Tsudata = {
   datasets: [
     {
       label: 'RACES',
-      data: [0, 0, 3, 9, 4],
+      data: [0, 0, 3, 9, 5],
       backgroundColor: [
         '#ffd32a',
         '#d2dae2',
@@ -403,7 +405,7 @@ export const Zhodata = {
   datasets: [
     {
       label: 'RACES',
-      data: [0, 0, 3, 9, 4],
+      data: [0, 0, 3, 9, 5],
       backgroundColor: [
         '#ffd32a',
         '#d2dae2',
@@ -427,7 +429,7 @@ export const Strdata = {
   datasets: [
     {
       label: 'RACES',
-      data: [0, 0, 5, 9, 2],
+      data: [0, 0, 6, 9, 2],
       backgroundColor: [
         '#ffd32a',
         '#d2dae2',
@@ -451,7 +453,7 @@ export const Albdata = {
   datasets: [
     {
       label: 'RACES',
-      data: [0, 0, 3, 9, 3],
+      data: [0, 0, 3, 9, 4],
       backgroundColor: [
         '#ffd32a',
         '#d2dae2',
@@ -475,7 +477,7 @@ export const Latdata = {
   datasets: [
     {
       label: 'RACES',
-      data: [0, 0, 0, 13, 3],
+      data: [0, 0, 0, 13, 4],
       backgroundColor: [
         '#ffd32a',
         '#d2dae2',
